@@ -1,7 +1,10 @@
 package fr.unilim.iut.SpaceInvaders;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Test;
+
+import fr.unilim.iut.SpaceInvaders.utils.HorsEspaceJeuException;
 
 public class SpaceInvadersTest {
 	
@@ -37,6 +40,53 @@ public class SpaceInvadersTest {
 		"...............\n" + 
 		".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	}
+	
+	
+	
+	@Test
+	public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
+		SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+		
+		try {
+			spaceinvaders.positionnerUnNouveauVaisseau(15,9);
+			fail("Position trop à droite : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+		
+		
+		try {
+			spaceinvaders.positionnerUnNouveauVaisseau(-1,9);
+			fail("Position trop à gauche : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+		
+		
+		try {
+			spaceinvaders.positionnerUnNouveauVaisseau(14,10);
+			fail("Position trop en bas : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+		
+		
+		try {
+			spaceinvaders.positionnerUnNouveauVaisseau(14,-1);
+			fail("Position trop à haut : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+			
+	}
+	 
+	 
+	 
+	 
+	 
+	 /*
+	 @Test
+	 public void test() {
+		 assertTrue(false);
+	 }
+	 */
+
 	
 
 }
