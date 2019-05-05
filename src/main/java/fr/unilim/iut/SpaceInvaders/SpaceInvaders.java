@@ -14,12 +14,8 @@ public class SpaceInvaders {
     //définir la taille de l'espace de jeu
     public SpaceInvaders(int longueur, int hauteur) {
 	   this.longueur = longueur;
-	   this.hauteur = hauteur;   
+	   this.hauteur = hauteur;
    }
-   
-    public String toString() {
-		return recupererEspaceJeuDansChaineASCII();
-	}
 
 
 	public String recupererEspaceJeuDansChaineASCII() {
