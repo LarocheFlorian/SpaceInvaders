@@ -2,7 +2,7 @@ package fr.unilim.iut.SpaceInvaders;
 
 public class Vaisseau {
 	
-	int abscisse; //A VERIFIER
+	int abscisse;
 	int ordonnee;
 	int longueur;
 	int hauteur;
@@ -19,8 +19,8 @@ public class Vaisseau {
     }
 	
     public boolean occupeLaPosition(int x, int y) {
-		return (estAbscisseCouverte(x) && estOrdonneeCouverte(y));
-	}
+	     return(estAbscisseCouverte(x) && estOrdonneeCouverte(y));
+    }
 
 	/**
 	 * @param y
