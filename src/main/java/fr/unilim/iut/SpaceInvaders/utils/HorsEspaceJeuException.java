@@ -6,6 +6,6 @@ package fr.unilim.iut.SpaceInvaders.utils;
 		    public HorsEspaceJeuException(String message) {
 			    super(message);
 		    }
-
-	    }
+		    
+	 }
 
