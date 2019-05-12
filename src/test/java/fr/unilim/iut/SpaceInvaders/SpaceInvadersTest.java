@@ -50,6 +50,7 @@ public class SpaceInvadersTest {
 		".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	}
 	
+	
 	  @Test
 		public void test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu() {
 			spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2), new Position(7,9));
