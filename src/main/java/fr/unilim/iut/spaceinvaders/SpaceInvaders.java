@@ -46,7 +46,7 @@ public class SpaceInvaders {
 	}
 
 	
-	private boolean aUnVaisseau() {
+	public boolean aUnVaisseau() {
 		return vaisseau!=null;
 	}
     	
@@ -89,5 +89,8 @@ public class SpaceInvaders {
 		vaisseau = new Vaisseau(longueurVaisseau, hauteurVaisseau);
 		vaisseau.positionner(x, y);
 	}
+
+
+
 
 }
