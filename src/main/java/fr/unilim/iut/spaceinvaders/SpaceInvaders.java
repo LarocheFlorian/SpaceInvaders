@@ -10,6 +10,7 @@ public class SpaceInvaders implements Jeu{
     int longueur;
     int hauteur;
     Vaisseau vaisseau;
+    Missile missile;
     
     //définir la taille de l'espace de jeu
     public SpaceInvaders(int longueur, int hauteur) {
@@ -30,12 +31,13 @@ public class SpaceInvaders implements Jeu{
 	}
 
 	
-	private char recupererMarqueDeLaPosition(int x, int y) {
+    private char recupererMarqueDeLaPosition(int x, int y) {
 		char marque;
 		if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
-		      marque=Constante.MARQUE_VAISSEAU;
-		else
-		      marque=Constante.MARQUE_VIDE;
+			marque = Constante.MARQUE_VAISSEAU;
+		else if (this.aUnMissileQuiOccupeLaPosition(x, y))
+				marque = Constante.MARQUE_MISSILE;
+		else marque = Constante.MARQUE_VIDE;
 		return marque;
 	}
 
@@ -123,7 +125,20 @@ public class SpaceInvaders implements Jeu{
    public boolean etreFini() {
       return false; 
    }
+
+
+	public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
+		this.missile = this.vaisseau.tirerUnMissile(dimensionMissile, vitesseMissile);	
+	}
+	
+	
+	private boolean aUnMissileQuiOccupeLaPosition(int x, int y) {
+		return this.aUnMissile() && missile.occupeLaPosition(x,y);
+	}
    
+	public boolean aUnMissile() {
+		return missile!=null;
+	}
 
 
 
