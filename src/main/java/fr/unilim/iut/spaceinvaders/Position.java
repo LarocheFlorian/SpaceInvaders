@@ -1,4 +1,4 @@
-package fr.unilim.iut.SpaceInvaders;
+package fr.unilim.iut.spaceinvaders;
 
 public class Position {
 	   int x;
@@ -24,4 +24,6 @@ public class Position {
      public void changerOrdonnee(int nouvelleOrdonnee) {
          this.y = nouvelleOrdonnee;
      }
+     
+     
 }
