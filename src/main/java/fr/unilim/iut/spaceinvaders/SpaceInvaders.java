@@ -18,7 +18,6 @@ public class SpaceInvaders implements Jeu{
    }
 
     
-    
 	public String recupererEspaceJeuDansChaineASCII() {
 		StringBuilder espaceDeJeu = new StringBuilder();
 		for (int y = 0; y < hauteur; y++) {
