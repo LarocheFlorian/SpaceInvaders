@@ -66,10 +66,12 @@ public class SpaceInvaders implements Jeu{
 
 	
 	public void deplacerVaisseauVersLaGauche() {
-		if (vaisseau.abscisseLaPlusAGauche()> 0)
+		if (0 < vaisseau.abscisseLaPlusAGauche())
 			vaisseau.seDeplacerVersLaGauche();
+		if (!estDansEspaceJeu(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusHaute())) {
+			vaisseau.positionner(0, vaisseau.ordonneeLaPlusHaute());
+		}
 	}
-
 
 	
 	public void positionnerUnNouveauVaisseau(Dimension dimension, Position position, int vitesse) {
@@ -97,11 +99,11 @@ public class SpaceInvaders implements Jeu{
 		return this.vaisseau;
 	}
 
-    public void initialiserJeu() {
-    	Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
-	    Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
-	    positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, 1);
-    }
+	public void initialiserJeu() {
+		Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
+		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
+		positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
+	 }
     
     
 	@Override
