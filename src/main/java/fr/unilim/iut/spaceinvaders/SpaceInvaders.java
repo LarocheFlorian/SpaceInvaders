@@ -144,6 +144,12 @@ public class SpaceInvaders implements Jeu{
 		return missile!=null;
 	}
 
+	/*
+	public Missile recupererMissile() {
+		return this.missile;
+	}
+	*/
+
 
 
 

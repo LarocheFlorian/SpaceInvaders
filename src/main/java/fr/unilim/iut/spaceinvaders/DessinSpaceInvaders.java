@@ -18,7 +18,9 @@ public class DessinSpaceInvaders implements DessinJeu {
 	   public void dessiner(BufferedImage im) {
 		   if (this.jeu.aUnVaisseau()) {
 			   Vaisseau vaisseau = this.jeu.recupererVaisseau();
+			   /*Missile missile = this.jeu.recupererMissile();*/
 			   this.dessinerUnVaisseau(vaisseau, im);
+			   /*this.dessinerUnMissile(missile, im);*/
 		   }
 	   }
 
@@ -29,4 +31,14 @@ public class DessinSpaceInvaders implements DessinJeu {
 		   	crayon.fillRect(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusBasse(), vaisseau.longueur(), vaisseau.hauteur());
 
 	   }
+	   
+	   /*
+	   private void dessinerUnMissile(Missile missile, BufferedImage im) {
+		   Graphics2D crayon = (Graphics2D) im.getGraphics();
+
+		   crayon.setColor(Color.blue);
+		   	crayon.fillRect(missile.abscisseLaPlusAGauche(), missile.ordonneeLaPlusBasse(), missile.longueur(), missile.hauteur());
+
+	   }
+	   */
 }
