@@ -21,15 +21,6 @@ public class Vaisseau extends Sprite{
 	}
 
 	
-	/*
-   public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
-		
-	   if ((vaisseau.hauteur()+ dimensionMissile.hauteur()) > this.hauteur )
-		   throw new MissileException("Pas assez de hauteur libre entre le vaisseau et le haut de l'espace jeu pour tirer le missile");
-						
-	   this.missile = this.vaisseau.tirerUnMissile(dimensionMissile,vitesseMissile);
-   }
-	*/
 
 /**
  * @param dimensionMissile
