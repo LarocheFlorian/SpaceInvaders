@@ -1,4 +1,4 @@
-package fr.unilim.iut.spaceinvaders;
+package fr.unilim.iut.spaceinvaders.model;
 
 import fr.unilim.iut.spaceinvaders.utils.DebordementEspaceJeuException;
 
@@ -159,10 +159,8 @@ public class SpaceInvaders implements Jeu{
 
 
 	public void deplacerMissile() {
-		if(missile.ordonneeLaPlusBasse() > 0) {
-			missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
-		}
-		else {
+		missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);	
+		if(missile.ordonneeLaPlusBasse() < 0) {
 			missile = null;
 		}
 	}

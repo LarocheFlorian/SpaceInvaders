@@ -5,9 +5,9 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.unilim.iut.spaceinvaders.Dimension;
-import fr.unilim.iut.spaceinvaders.Position;
-import fr.unilim.iut.spaceinvaders.Vaisseau;
+import fr.unilim.iut.spaceinvaders.model.Dimension;
+import fr.unilim.iut.spaceinvaders.model.Position;
+import fr.unilim.iut.spaceinvaders.model.Vaisseau;
 import fr.unilim.iut.spaceinvaders.utils.MissileException;
 
 public class VaisseauTest {
