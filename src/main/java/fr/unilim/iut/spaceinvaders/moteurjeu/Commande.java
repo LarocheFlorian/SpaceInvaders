@@ -19,9 +19,9 @@ public class Commande {
 
 	public Commande()
 	{
-		
+
 	}
-	
+
 	/**
 	 * constructeur par copie
 	 * copie la commande pour en creer une nouvelle
@@ -35,5 +35,5 @@ public class Commande {
 		this.droite=commandeACopier.droite;		
 		this.tir=commandeACopier.tir;
 	}
-	
+
 }

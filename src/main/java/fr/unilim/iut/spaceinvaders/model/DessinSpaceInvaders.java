@@ -10,37 +10,37 @@ public class DessinSpaceInvaders implements DessinJeu {
 
 	private SpaceInvaders jeu;
 
-	   public DessinSpaceInvaders(SpaceInvaders spaceInvaders) {
-		   this.jeu = spaceInvaders;
-	   }
+	public DessinSpaceInvaders(SpaceInvaders spaceInvaders) {
+		this.jeu = spaceInvaders;
+	}
 
-	   @Override
-	   public void dessiner(BufferedImage im) {
-		   if (this.jeu.aUnVaisseau()) {
-			   Vaisseau vaisseau = this.jeu.recupererVaisseau();
-			   this.dessinerUnVaisseau(vaisseau, im);
-		   }
-		   if (this.jeu.aUnMissile()) {
-			   Missile missile = this.jeu.recupererMissile();
-			   this.dessinerUnMissile(missile, im);
-		   }
-	   }
+	@Override
+	public void dessiner(BufferedImage im) {
+		if (this.jeu.aUnVaisseau()) {
+			Vaisseau vaisseau = this.jeu.recupererVaisseau();
+			this.dessinerUnVaisseau(vaisseau, im);
+		}
+		if (this.jeu.aUnMissile()) {
+			Missile missile = this.jeu.recupererMissile();
+			this.dessinerUnMissile(missile, im);
+		}
+	}
 
-	   private void dessinerUnVaisseau(Vaisseau vaisseau, BufferedImage im) {
-		   Graphics2D dessinVaisseau = (Graphics2D) im.getGraphics();
+	private void dessinerUnVaisseau(Vaisseau vaisseau, BufferedImage im) {
+		Graphics2D dessinVaisseau = (Graphics2D) im.getGraphics();
 
-		   dessinVaisseau.setColor(Color.gray);
-		   	dessinVaisseau.fillRect(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusBasse(), vaisseau.longueur(), vaisseau.hauteur());
+		dessinVaisseau.setColor(Color.gray);
+		dessinVaisseau.fillRect(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusBasse(), vaisseau.longueur(), vaisseau.hauteur());
 
-	   }
-	   
-	   
-	   private void dessinerUnMissile(Missile missile, BufferedImage im) {
-		   Graphics2D dessinMissile = (Graphics2D) im.getGraphics();
+	}
 
-		   dessinMissile.setColor(Color.blue);
-		   	dessinMissile.fillRect(missile.abscisseLaPlusAGauche(), missile.ordonneeLaPlusBasse(), missile.longueur(), missile.hauteur());
 
-	   }
-	   
+	private void dessinerUnMissile(Missile missile, BufferedImage im) {
+		Graphics2D dessinMissile = (Graphics2D) im.getGraphics();
+
+		dessinMissile.setColor(Color.blue);
+		dessinMissile.fillRect(missile.abscisseLaPlusAGauche(), missile.ordonneeLaPlusBasse(), missile.longueur(), missile.hauteur());
+
+	}
+
 }

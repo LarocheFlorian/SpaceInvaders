@@ -14,12 +14,12 @@ public class InterfaceGraphique  {
 	 * le Panel lie a la JFrame
 	 */
 	private PanelDessin panel;
-	
+
 	/**
 	 * le controleur lie a la JFrame
 	 */
 	private Controleur controleur;
-	
+
 	/**
 	 * la construction de l'interface grpahique
 	 * - construit la JFrame
@@ -33,24 +33,24 @@ public class InterfaceGraphique  {
 		//creation JFrame
 		JFrame f=new JFrame();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		// creation panel
 		this.panel=new PanelDessin(x, y,afficheurUtil);
 		f.setContentPane(this.panel);
-		
+
 		//ajout du controleur
 		Controleur controlleurGraph=new Controleur();
 		this.controleur=controlleurGraph;
 		this.panel.addKeyListener(controlleurGraph);	
-		
+
 		//recuperation du focus
 		f.pack();
 		f.setVisible(true);
 		f.getContentPane().setFocusable(true);
 		f.getContentPane().requestFocus();
 	}
-	
-	
+
+
 	/**
 	 * retourne le controleur de l'affichage construit
 	 * @return
@@ -65,5 +65,5 @@ public class InterfaceGraphique  {
 	public void dessiner() {
 		this.panel.dessinerJeu();	
 	}
-	
+
 }

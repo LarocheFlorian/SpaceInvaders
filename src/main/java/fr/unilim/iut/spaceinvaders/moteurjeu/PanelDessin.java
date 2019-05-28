@@ -67,7 +67,7 @@ public class PanelDessin extends JPanel {
 		// l'ancienne image est videe
 		this.imageSuivante = temp;
 		this.imageSuivante.getGraphics()
-				.fillRect(0, 0, this.width, this.height);
+		.fillRect(0, 0, this.width, this.height);
 		// met a jour l'image a afficher sur le panel
 		this.repaint();
 	}

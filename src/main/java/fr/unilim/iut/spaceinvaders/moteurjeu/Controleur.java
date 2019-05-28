@@ -45,7 +45,7 @@ public class Controleur implements KeyListener {
 	/**
 	 * met a jour les commandes en fonctions des touches appuyees
 	 */
-    public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent e) {
 
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_LEFT:

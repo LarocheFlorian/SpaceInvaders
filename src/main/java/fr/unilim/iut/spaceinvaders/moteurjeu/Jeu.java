@@ -15,7 +15,7 @@ public interface Jeu {
 	 *            commande utilisateur
 	 */
 	public void evoluer(Commande commandeUser);
-	
+
 	/**
 	 * @return true si et seulement si le jeu est fini
 	 */
