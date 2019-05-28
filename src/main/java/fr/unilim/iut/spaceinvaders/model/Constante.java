@@ -12,9 +12,9 @@ public class Constante {
     public static final int MISSILE_HAUTEUR = 12;
     public static final int MISSILE_VITESSE = 10;
     
-    public static final int ENVAHISSEUR_LONGUEUR = 1;
-    public static final int ENVAHISSEUR_LARGEUR = 1;
-    public static final int ENVAHISSEUR_VITESSE = 1;
+    public static final int ENVAHISSEUR_LONGUEUR = 30;
+    public static final int ENVAHISSEUR_LARGEUR = 20;
+    public static final int ENVAHISSEUR_VITESSE = 8;
     
     
 	public static final char MARQUE_FIN_LIGNE = '\n';
